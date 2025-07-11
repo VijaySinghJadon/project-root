@@ -28,3 +28,4 @@ jobs:
         context: .
         push: true
         tags: learntechjadon/k8s-demo-app:latest
+#ttt
