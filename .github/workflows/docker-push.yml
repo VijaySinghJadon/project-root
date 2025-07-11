@@ -26,7 +26,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: Dockerfile   # ✅ Not ./Dockerfile or anything else
+        file: ./Dockerfile   # ✅ Not ./Dockerfile or anything else
         push: true
         tags: learntechjadon/k8s-demo-app:latest
       
