@@ -25,8 +25,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ${{ github.workspace }}
-        file: ${{ github.workspace }}
+        context: .
+        file: Dockerfile   # ✅ Not ./Dockerfile or anything else
         push: true
         tags: learntechjadon/k8s-demo-app:latest
-#g
+      
