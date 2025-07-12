@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Code
       uses: actions/checkout@v3
 
     - name: Set up Docker Buildx
@@ -25,8 +25,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v5
       with:
-        context: .
-        file: ./Dockerfile
+        context: .                      # Root of your rpo
+        file: ./Dockerfile              # Make sure  is in the root
         push: true
         tags: learntechjadon/k8s-demo-app:latest
- #hh       
